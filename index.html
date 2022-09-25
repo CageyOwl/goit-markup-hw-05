@@ -19,6 +19,14 @@
   </head>
 
   <body>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <svg class="close-modal-button" data-modal-close>
+          <use href="./img/icons.svg#close-modal"></use>
+        </svg>
+      </div>
+    </div>
+
     <header class="page-header">
       <div class="container flex">
         <nav class="flex">
@@ -53,7 +61,7 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-button" type="button">Замовити послугу</button>
+        <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
       </section>
 
       <section class="advantages section">
@@ -99,28 +107,31 @@
             <img
               class="services-img"
               src="./img/services/serv1.jpg"
-              alt="Послуга 1"
+              alt="Десктопні додатки"
               width="370"
               height="294"
             />
+            <p class="services-caption">Десктопні додатки</p>
           </li>
           <li class="services-list-item">
             <img
               class="services-img"
               src="./img/services/serv2.jpg"
-              alt="Послуга 2"
+              alt="Мобільні додатки"
               width="370"
               height="294"
             />
+            <p class="services-caption">Мобільні додатки</p>
           </li>
           <li class="services-list-item">
             <img
               class="services-img"
               src="./img/services/serv3.jpg"
-              alt="Послуга 3"
+              alt="Дизайнерські рішення"
               width="370"
               height="294"
             />
+            <p class="services-caption">Дизайнерські рішення</p>
           </li>
         </ul>
       </section>
@@ -335,7 +346,9 @@
     <footer class="footer-custom">
       <div class="container flex">
         <div class="footer-contacts-container">
-          <a class="footer-logo logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
+          <a class="footer-logo logo" href="./index.html"
+            ><span class="logo-web">Web</span>Studio</a
+          >
           <address class="footer-contacts-container">
             <ul class="footer-contacts-list">
               <li class="footer-contacts-item">
@@ -348,7 +361,9 @@
                 >
               </li>
               <li class="footer-contacts-item">
-                <a class="footer-contact-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="footer-contact-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="footer-contacts-item">
                 <a class="footer-contact-link" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -356,7 +371,7 @@
             </ul>
           </address>
         </div>
-        
+
         <div class="footer-socials-container">
           <p>Приєднуйтесь</p>
           <ul class="footer-socials-list flex">
@@ -392,5 +407,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
